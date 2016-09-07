@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+
+<?import javafx.scene.text.Text?>
+<?import com.sun.javafx.scene.control.skin.IntegerField?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Sommurai.Controller">
+    <!-- Déclaration des colonnes et des lignes -->
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" />
+        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" />
+    </rowConstraints>
+    <!-- Déclaration éléments du gridpane -->
+    <children>
+       <!-- Première ligne -->
+        <GridPane fx:id="gridChiffres">
+            <rowConstraints>
+                <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0"/>
+            </rowConstraints>
+            <!-- l'ajout de boutons est faite en programmation -->
+        </GridPane>
+
+       <!-- Deuxième ligne -->
+       <Text id="txtBut" GridPane.rowIndex="1" GridPane.columnIndex="0" text=""></Text>
+       <Text id="txtSomme" GridPane.rowIndex="1" GridPane.columnIndex="1" text="Somme: "></Text>
+       <CheckBox id="cbxNoise"  text="Noise" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+       <CheckBox id="cbxFindmean" text="Find mean" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+       <Button id="btnNext" text="Next" prefWidth="90.0" GridPane.columnIndex="4" GridPane.rowIndex="1" onAction="#btnClickNext" />
+       <Button id="btnGiveUp" text="Give up" prefWidth="90.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+       <Button id="btnReset" text="Reset" prefWidth="90.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+   </children>
+</GridPane>
